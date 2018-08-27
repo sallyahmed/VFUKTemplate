@@ -24,6 +24,12 @@ class VFUK___VARIABLE_productName:identifier___ViewController: VFUKBaseViewContr
         configureBinding()
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        /// tracking screen
+        VFUKGlobalTrackingHelper.sharedTrackingHelper.trackScreen(screen: VFUKTrackingConstants.vfuk___VARIABLE_productName:identifier___ScreenName)
+    }
+
     /// setup function for calling all needed observables for display and draw view
     fileprivate func setup() {
 
@@ -37,4 +43,6 @@ class VFUK___VARIABLE_productName:identifier___ViewController: VFUKBaseViewContr
     override func retryAction() {
         self.setup()
     }
+
+
 }
