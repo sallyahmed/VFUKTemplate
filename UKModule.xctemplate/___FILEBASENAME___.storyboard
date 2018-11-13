@@ -5,22 +5,88 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VodafoneRg.ttf">
+            <string>VodafoneRg-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--product Name:identifier View Controller-->
         <scene sceneID="ekR-Fb-2bd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tiP-vq-aY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="VFUK___VARIABLE_productName:identifier___ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RVP-pU-DJc" customClass="VFUK___VARIABLE_productName:identifier___ViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ljG-eo-b6a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="rn0-Ih-VXF" customClass="VFUKUIScrollView" customModule="VFUK_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQ1-vn-fLN">
+                                        <rect key="frame" x="8" y="20" width="359" height="109"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Psj-bu-8yn">
+                                                <rect key="frame" x="0.0" y="40" width="359" height="61"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cc-Rw-sEM" userLabel="Header View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="61"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{Title}" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NsT-j7-or0" userLabel="Title Label">
+                                                                <rect key="frame" x="15" y="10" width="329" height="41"/>
+                                                                <fontDescription key="fontDescription" name="VodafoneRg-Regular" family="Vodafone Rg" pointSize="26"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.16862745100000001" green="0.25882352939999997" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="NsT-j7-or0" firstAttribute="leading" secondItem="4Cc-Rw-sEM" secondAttribute="leading" constant="15" id="BjU-Xm-SM1"/>
+                                                            <constraint firstItem="NsT-j7-or0" firstAttribute="top" secondItem="4Cc-Rw-sEM" secondAttribute="top" constant="10" id="FDV-ZD-jO6"/>
+                                                            <constraint firstAttribute="width" secondItem="4Cc-Rw-sEM" secondAttribute="height" multiplier="706:120" id="Mt3-Xu-eis"/>
+                                                            <constraint firstAttribute="bottom" secondItem="NsT-j7-or0" secondAttribute="bottom" constant="10" id="NYh-js-dPP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="NsT-j7-or0" secondAttribute="trailing" constant="15" id="mWf-pE-tZX"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Psj-bu-8yn" secondAttribute="bottom" constant="8" id="dVA-3O-Aca"/>
+                                            <constraint firstItem="Psj-bu-8yn" firstAttribute="leading" secondItem="KQ1-vn-fLN" secondAttribute="leading" id="dZg-j1-PTA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Psj-bu-8yn" secondAttribute="trailing" id="hDm-ae-vRU"/>
+                                            <constraint firstItem="Psj-bu-8yn" firstAttribute="top" secondItem="KQ1-vn-fLN" secondAttribute="top" constant="40" id="hGD-Ij-Cnb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="KQ1-vn-fLN" firstAttribute="leading" secondItem="rn0-Ih-VXF" secondAttribute="leading" constant="8" id="6s4-ar-oRJ"/>
+                                    <constraint firstItem="KQ1-vn-fLN" firstAttribute="top" secondItem="rn0-Ih-VXF" secondAttribute="top" constant="20" id="Ns8-Sb-RTw"/>
+                                    <constraint firstAttribute="trailing" secondItem="KQ1-vn-fLN" secondAttribute="trailing" constant="8" id="Z40-PA-qk5"/>
+                                    <constraint firstAttribute="bottom" secondItem="KQ1-vn-fLN" secondAttribute="bottom" constant="8" id="b1u-fV-eiB"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="contentViewTopConstraint" destination="Ns8-Sb-RTw" id="Vr2-Xd-h2d"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XHi-jI-EqU" firstAttribute="bottom" secondItem="rn0-Ih-VXF" secondAttribute="bottom" id="MBx-ZE-QgA"/>
+                            <constraint firstItem="rn0-Ih-VXF" firstAttribute="top" secondItem="ljG-eo-b6a" secondAttribute="top" id="bqU-Uw-Som"/>
+                            <constraint firstAttribute="trailing" secondItem="rn0-Ih-VXF" secondAttribute="trailing" id="cE3-ds-xdH"/>
+                            <constraint firstItem="rn0-Ih-VXF" firstAttribute="leading" secondItem="XHi-jI-EqU" secondAttribute="leading" id="yG0-27-uHN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XHi-jI-EqU"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tiP-vq-aY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95" y="-35"/>
         </scene>
